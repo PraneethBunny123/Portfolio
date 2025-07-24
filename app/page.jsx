@@ -1,6 +1,7 @@
 import { FiDownload } from 'react-icons/fi'
 
 import { Button } from '@/components/ui/button'
+import Socials from '@/components/Socials'
 
 const Home = () => {
 	return (
@@ -29,7 +30,12 @@ const Home = () => {
 								<span>Download Resume</span>
 								<FiDownload className='text-xl' />
 							</Button>
-                            <div>Socials</div>
+                            <div className='mb-8 xl:mb-0'>
+                                <Socials 
+                                    containerStyles='flex gap-6'
+									iconStyles='w-9 h-9 flex justify-center items-center border border-accent text-accent hover:bg-accent hover:text-primary hover:transition-all duration-500 rounded-full'
+                                />
+                            </div>
                         </div>
 					</div>
 
