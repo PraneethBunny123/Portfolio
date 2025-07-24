@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
 
 const jetbrainsMono = JetBrains_Mono({
 	variable: '--font-jetbrainsMono',
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={jetbrainsMono.variable}>
-
+			<Header />
 				{children}
 			</body>
 		</html>
