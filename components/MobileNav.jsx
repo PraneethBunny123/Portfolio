@@ -29,9 +29,9 @@ export default function MobileNav() {
 
 				{/* nav */}
 				<nav className='flex flex-col gap-8 justify-center items-center'>
-					{links.map((link, index) => (
+					{links.map(link => (
 						<Link
-							key={index}
+							key={link.name}
 							href={link.path}
 							className={`${
 								link.path == pathName && 'border-accent border-b-2 text-accent'
