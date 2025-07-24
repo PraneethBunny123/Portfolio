@@ -21,7 +21,16 @@ const Home = () => {
                         </p>
 
 						{/* button and socials */}
-						
+						<div className='flex flex-col items-center xl:flex-row gap-8'>
+                            <Button
+								variant='outline'
+								className='uppercase flex items-center gap-2'
+								size='lg'>
+								<span>Download Resume</span>
+								<FiDownload className='text-xl' />
+							</Button>
+                            <div>Socials</div>
+                        </div>
 					</div>
 
 					
