@@ -129,19 +129,24 @@ export default function Resume() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+                opacity: 1,
+                transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
             }}
             className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
         >
-            <Tabs>
-                <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-                    <TabsTrigger value="experience"> Experience</TabsTrigger>
-                    <TabsTrigger value="skills">Skills</TabsTrigger>
-                    <TabsTrigger value="education">Education</TabsTrigger>
-                    <TabsTrigger value="about">About me</TabsTrigger>                
-                </TabsList>
-            </Tabs>
+            <div className="container mx-auto border-yellow-200">
+                <Tabs
+                    defaultValue="experience"
+                    className="flex flex-col xl:flex-row gap-[60px]"
+                >
+                    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+                        <TabsTrigger value="experience"> Experience</TabsTrigger>
+                        <TabsTrigger value="skills">Skills</TabsTrigger>
+                        <TabsTrigger value="education">Education</TabsTrigger>
+                        <TabsTrigger value="about">About me</TabsTrigger>
+                    </TabsList>
+                </Tabs>
+            </div>
         </motion.div>
     )
 }
