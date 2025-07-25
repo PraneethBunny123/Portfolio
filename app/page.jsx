@@ -25,13 +25,15 @@ const Home = () => {
 
 						{/* button and socials */}
 						<div className='flex flex-col items-center xl:flex-row gap-8'>
-                            <Button
-								variant='outline'
-								className='uppercase flex items-center gap-2'
-								size='lg'>
-								<span>Download Resume</span>
-								<FiDownload className='text-xl' />
-							</Button>
+                            <a href='/assets/resume.pdf' download='Praneeth_Resume.pdf'>
+                                <Button
+                                    variant='outline'
+                                    className='uppercase flex items-center gap-2'
+                                    size='lg'>
+                                    <span>Download Resume</span>
+                                    <FiDownload className='text-xl' />
+                                </Button>
+                            </a>
                             <div className='mb-8 xl:mb-0'>
                                 <Socials 
                                     containerStyles='flex gap-6'

@@ -39,7 +39,7 @@ export default function Stats() {
 					{stats.map((item, index) => (
 						<div
 							key={index}
-							className='flex-1 flex gap-4 items-center justify-center xl:justify-start'
+							className='flex-1 flex gap-6 items-center justify-center xl:justify-start'
                         >
 							<div className='text-3xl xl:text-4xl font-bold'>
 								<CountUp
@@ -52,7 +52,7 @@ export default function Stats() {
 							</div>
 							<p
 								className={`${
-									item.text.length > 15 ? 'max-w-[100px]' : 'max-w-[150px]'
+									item.text.length < 15 ? 'max-w-[100px]' : 'max-w-[150px]'
 								} leading-snug text-white/80`}>
 								{item.text}
 							</p>
