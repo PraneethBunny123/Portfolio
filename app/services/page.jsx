@@ -13,7 +13,7 @@ const services = [
 		num: '02',
 		title: 'Mobile Development',
 		description:
-            'I develop high-quality mobile applications using React Native, enabling consistent and responsive experiences across both iOS and Android from a single codebase. I focus on performance optimization through techniques like lazy loading, modular architecture, and memory-efficient rendering. For state management, I implement scalable solutions using Redux or Context API. I design smooth and intuitive navigation flows with React Navigation and build modern, accessible UIs using reusable components and clean layouts. With strong debugging practices using tools like React Native Debugger and Chrome DevTools, I deliver polished, fast, and maintainable mobile apps.'
+            'I develop high-quality mobile applications using React Native, enabling consistent and responsive experiences across both iOS and Android from a single codebase. I focus on performance optimization through techniques like lazy loading, modular architecture, and memory-efficient rendering. For state management, I implement scalable solutions using Redux or Context API. I design smooth and intuitive navigation flows with React Navigation and build modern, accessible UIs using reusable components and clean layouts. With strong debugging practices using tools like React Native Debugger and Chrome DevTools, I deliver polished, fast, and maintainable mobile apps. Recently, I implemented a cross-platform app using React Native and React Query, ensuring efficient real-time data handling across devices.'
 	},
 ]
 
@@ -41,7 +41,7 @@ export default function Contact() {
                                 <p className='text-white/60'>{service.description}</p>
                             </div>
 							{/* border */}
-							<div className='border-b border-white/20 w-full'></div>
+							<div className='border-b border-white/20 w-full my-4'></div>
 						</div>
 					))}
 				</motion.div>
