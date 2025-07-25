@@ -10,7 +10,7 @@ export default function Header() {
                 {/* LOGO */}
                 <Link href='/'>
 					<h1 className='text-4xl font-semibold'>
-						Praneeth G<span className='text-accent'>.</span>
+						Praneeth<span className='text-accent'>.</span>
 					</h1>
 				</Link>
 
