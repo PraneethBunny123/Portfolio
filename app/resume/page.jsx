@@ -1,11 +1,18 @@
+'use client'
+
 import { SiTypescript, SiPython, SiJava, SiC, SiMysql, 
 SiPostgresql, SiMongodb, SiFirebase, SiNodedotjs, SiTailwindcss, SiRedux, SiGraphql, SiJest, SiTestinglibrary, SiPostman, 
 SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiNetbeanside, 
 SiJirasoftware, SiVite, SiNpm, SiYarn, SiExpo, SiAndroidstudio, SiXcode, 
 SiWebpack, SiBabel, SiNextdotjs, SiExpress, SiApollographql, SiJson, SiAxios, 
-SiAmazonaws, SiAmazonec2, SiAmazons3, SiAwslambda, SiAmazoncloudwatch, SiGit } from 'react-icons/si';
+SiAmazonaws, SiAmazonec2, SiAmazons3, SiAwslambda, SiAmazoncloudwatch, SiGit, SiReactquery, SiReactrouter } from 'react-icons/si';
 
 import { FaHtml5, FaCss3, FaJs, FaReact, FaGithub } from "react-icons/fa";
+
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
 
 
 const about = {
@@ -117,10 +124,10 @@ const skills = {
     ]
 };
 
-export default function Contact() {
+export default function Resume() {
     return (
         <div>
-            Contact
+            resume
         </div>
     )
 }
