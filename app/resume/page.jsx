@@ -110,7 +110,8 @@ const education = {
 
 const skills = {
     title: "My Skills",
-    description: "I possess a strong foundation in JavaScript, TypeScript, React.js, and React Native, with proficiency in Next.js and Tailwind CSS for building modern, responsive web and mobile applications. I have extensive experience in state management using Redux and React Context API, as well as working with different API's, Fetch, Axios, GraphQL, and React Query for smooth data handling. Additionally, I’m skilled in testing and debugging using Jest, React Testing Library, and tools like Reactotron and Flipper to ensure high-quality code. I am also well-versed in version control, build tools, and CI/CD practices using Git, GitHub, and Jenkins.",
+    description: `I am a Full-stack-leaning Frontend Developer skilled in JavaScript, TypeScript, Python, and Java, with hands-on experience in React.js, React Native, Next.js, and Node.js. I build responsive apps using Tailwind CSS and manage state with Redux and Context API. I work with REST and GraphQL APIs using Axios, Fetch, and React Query.
+    I have experience with AWS (EC2, S3, Lambda), basic CI/CD, and testing tools like Jest and React Testing Library. I’m also proficient with MongoDB, Firebase, PostgreSQL, and MySQL. I use Git, GitHub, VS Code, and modern build tools like Vite, Webpack, and Babel to streamline development.`,
     skillsList: [
         { icon: <FaHtml5 />, name: "HTML5" },
         { icon: <FaCss3 />, name: "CSS3" },
@@ -210,23 +211,23 @@ export default function Resume() {
                             </div>
                         </TabsContent>
                         {/* skills */}
-                        <TabsContent value="skills" className="w-full">
-                            <div className="flex flex-col  gap-[30px] ">
+                        <TabsContent value="skills" className="w-full h-full">
+                            <div className="flex flex-col gap-[30px] ">
                                 <div className="flex flex-col text-center gap-[30px] xl:text-left">
                                     <h3 className="font-bold text-4xl">{skills.title}</h3>
                                     <p className="text-white/60">{skills.description}</p>
                                 </div>
 
-                                <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:gap-[30px] lg:grid-cols-4  gap-4 ">
+                                <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:gap-[30px] lg:grid-cols-5 xl:grid-cols-6 gap-4">
                                     {skills.skillsList.map((skill,index)=>(
                                         <li key={index} className=" ">
                                             <TooltipProvider delayDuration={100}>
                                                 <Tooltip >
                                                     <TooltipTrigger className="w-full h-[120px] rounded-xl flex justify-center bg-[#232329] items-center group">
-                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300 ">{skill.icon}</div>
+                                                        <div className="text-5xl group-hover:text-accent transition-all duration-300 ">{skill.icon}</div>
                                                     </TooltipTrigger>
                                                     <TooltipContent>
-                                                        <p className=" capitalize">{skill.name}</p>
+                                                        <p className="capitalize">{skill.name}</p>
                                                     </TooltipContent>
                                                 </Tooltip>
                                             </TooltipProvider>
@@ -245,12 +246,15 @@ export default function Resume() {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {education.items.map((item,index)=>(
-                                            <li key={index} className="bg-[#232329] flex h-[184px] flex-col justify-center items-center gap-1 py-6 px-10 xl:items-start w-[400px]">
+                                            <li 
+                                                key={index} 
+                                                className="bg-[#232329] flex h-[184px] flex-col justify-center items-center gap-1 py-6 px-10 lg:items-start w-[400px] rounded-xl"
+                                            >
                                                 <span className="text-accent">{item.duration}</span>
 
-                                                <h3 className="text-xl max-w-[300px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
 
-                                                <div className="flex gap-3 items-center w-[400px]">
+                                                <div className="flex gap-3 items-center">
                                                     <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                                                     <p className="text-white/60">{item.institution}</p>
                                                 </div>
