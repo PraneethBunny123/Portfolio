@@ -34,16 +34,36 @@ export default function Contact() {
                 opacity: 1,
                 transition: { delay: 2, duration: 0.4, ease: "easeIn" },
             }}
-            className="py-12"
+            className="py-12 xl:py-18"
         >
-            <div>
-                <div>
+            <div className="container mx-auto">
+                <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
-                    <div>
-                        <form>form</form>
+                    <div className="xl:w-[54%] xl:order-none order-2">
+                        <form>
+                            <h3 className="text-4xl text-accent">Let's Work Together</h3>
+                            <p className="text-white/60">
+                                Hello! I am currently open to new opportunities. If you have any open front-end roles for a React or React Native Developer, I would love to connect and discuss how I can contribute to your team.
+                            </p>
+                        </form>
                     </div>
+
                     {/* info */}
-                    <div>info</div>
+                    <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb:8 xl:mb-0 ">
+                        <ul className="flex flex-col gap-10">
+                            {info.map(item => (
+                                <li key={item.title} className="flex items-center gap-6">
+                                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex justify-center items-center">
+                                        <div className="text-[28px]">{item.icon}</div>
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-white/60">{item.title}</p>
+                                        <h3 className="text-xl">{item.description}</h3>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </motion.section>
