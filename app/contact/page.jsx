@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const info = [
@@ -28,8 +28,24 @@ const info = [
 
 export default function Contact() {
     return (
-        <div>
-            Contact
-        </div>
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{
+                opacity: 1,
+                transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+            }}
+            className="py-12"
+        >
+            <div>
+                <div>
+                    {/* form */}
+                    <div>
+                        <form>form</form>
+                    </div>
+                    {/* info */}
+                    <div>info</div>
+                </div>
+            </div>
+        </motion.section>
     )
 }
