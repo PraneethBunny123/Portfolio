@@ -6,23 +6,21 @@ import {PiCaretLeftBold, PiCaretRightBold} from 'react-icons/pi'
 
 export default function WorkSliderButton({containerStyles, btnStyles, projects, project}) {
     const swiper = useSwiper()
-    console.log(project.num)
-    console.log(projects.length.toString())
 
     return (
         <div className={containerStyles }>
             <button 
-                className={`${btnStyles} ${project.num==='01' ? 'disabled:bg-[#40382f] disabled:opacity-50':''}`} 
+                className={`${btnStyles} ${project.num === '01' ? 'disabled:bg-[#40382f] disabled:opacity-50':''}`} 
                 onClick={()=>{swiper.slidePrev()}} 
-                disabled={project.num==='01'}
+                disabled={project.num === '01'}
             >
                 <PiCaretLeftBold/>
             </button>
 
             <button 
-                className={`${btnStyles} ${project.num[1]===projects.length.toString() ? 'disabled:bg-[#40382f] disabled:opacity-50' : ''}`} 
+                className={`${btnStyles} ${project.num[1] === projects.length.toString() ? 'disabled:bg-[#40382f] disabled:opacity-50' : ''}`} 
                 onClick={()=>{swiper.slideNext()}} 
-                disabled={project.num[1]===projects.length.toString()}
+                disabled={project.num[1] === projects.length.toString()}
             >
                 <PiCaretRightBold/>
             </button>

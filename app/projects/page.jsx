@@ -7,6 +7,7 @@ import { BsGithub, BsArrowUpRight } from "react-icons/bs";
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
+import WorkSliderButton from "@/components/WorkSliderButton";
 
 
 const projects = [
@@ -21,7 +22,7 @@ const projects = [
             { name: "TailwindCss" },
             { name: "ShadCn" },
             { name: "GoogleGeminiAI" },
-            { name: "FirebaseFirestore" },
+            { name: "Firebase" },
             { name: "ClerkAuthentication" },
         ],
         image: "/assets/images/smarthire.png",
@@ -51,9 +52,7 @@ const projects = [
         stack: [
             { name: "NextJS" },
             { name: "React" },
-            { name: "xss" },
-            { name: "JS" },
-            { name: "MealIcons" },
+            { name: "css" },
             { name: "better-Sqlite3" },
         ],
         image: "/assets/images/meals.png",
@@ -177,6 +176,14 @@ export default function Contact() {
                                     </div>
                                 </SwiperSlide>
                             ))}
+
+                            {/* Custom swiper button */}
+                            <WorkSliderButton
+                                containerStyles="flex absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none gap-2"
+                                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                                projects={projects}
+                                project={project}
+                            />
                         </Swiper>
                     </div>
                 </div>
