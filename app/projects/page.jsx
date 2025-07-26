@@ -105,8 +105,10 @@ export default function Contact() {
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-                    <div>text</div>
-                    <div>slider</div>
+                    <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none xl:h-[460px] gap-[30px]">
+                        text
+                    </div>
+                    <div className="w-full xl:w-[50%]">slider</div>
                 </div>
             </div>
         </motion.section>
