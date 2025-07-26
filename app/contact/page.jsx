@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 //emailjs imports
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const info = [
@@ -30,27 +30,29 @@ const info = [
 
 export default function Contact() {
     const form = useRef();
+    const [isLoading, setIsLoading] = useState(false)
 
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    const sendEmail = (e) => {
-    e.preventDefault();
+    function sendEmail(e) {
+        e.preventDefault();
+        setIsLoading(true) //loading
 
-    emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY,
-        })
-        .then(
-        () => {
-            alert('Sent message successfully!')
-            e.target.reset()
-        },
-        (error) => {
-            console.log('FAILED...', error.text);
-        },
-        );
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+            publicKey: PUBLIC_KEY,
+            })
+            .then(() => {
+                alert('Sent message successfully!')
+                e.target.reset()
+            },
+            (error) => {
+                alert('Failed to sent message');
+            },
+            ).finally(() => {
+                setIsLoading(false) //stop loading
+            })
     };
 
     return (
@@ -98,8 +100,8 @@ export default function Contact() {
                                 required
                             />
                             {/* button */}
-                            <Button size="md" className="max-w-40 py-2">
-                                send message
+                            <Button size="md" className="max-w-40 py-2" disabled={isLoading}>
+                                {isLoading ? 'Sending...' : 'Send Message'}
                             </Button>
                         </form>
                     </div>
