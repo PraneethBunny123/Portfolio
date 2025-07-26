@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { toast } from "sonner";
 
 //emailjs imports
 import React, { useRef, useState } from 'react';
@@ -44,11 +45,11 @@ export default function Contact() {
             publicKey: PUBLIC_KEY,
             })
             .then(() => {
-                alert('Sent message successfully!')
+                toast.success('Message sent successfully!')
                 e.target.reset()
             },
             (error) => {
-                alert('Failed to sent message');
+                toast.error('Failed to sent message');
             },
             ).finally(() => {
                 setIsLoading(false) //stop loading
