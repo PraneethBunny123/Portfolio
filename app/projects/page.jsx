@@ -115,13 +115,23 @@ export default function Contact() {
                             </div>
 
                             {/* category */}
-                            <h2 className="font-bold text-white group-hover:text-accent capitalize transition-all duration-200 leading-none text-[42px]">
+                            <h2 className="font-bold text-white group-hover:text-accent capitalize transition-all duration-500 leading-none text-[42px]">
                                 {project.category}
                             </h2>
                             <h3 className="text-accent text-xl capitalize">{project.title}</h3>
 
                             {/* description */}
                             <p className="text-white/60">{project.description}</p>
+
+                            {/* tech stack */}
+                            <ul className="flex gap-4">
+                                {project.stack.map((item, index) => (
+                                    <li key={index} className="text-xl text-accent">
+                                        {item.name}
+                                        
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%]">slider</div>
