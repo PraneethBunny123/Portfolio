@@ -1,13 +1,50 @@
 'use client'
 
-import { SiTypescript, SiPython, SiJava, SiC, SiMysql, 
-SiPostgresql, SiMongodb, SiFirebase, SiNodedotjs, SiTailwindcss, SiRedux, SiGraphql, SiJest, SiTestinglibrary, SiPostman, 
-SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiNetbeanside, 
-SiJirasoftware, SiVite, SiNpm, SiYarn, SiExpo, SiAndroidstudio, SiXcode, 
-SiWebpack, SiBabel, SiNextdotjs, SiExpress, SiApollographql, SiJson, SiAxios, 
-SiAmazonaws, SiAmazonec2, SiAmazons3, SiAwslambda, SiAmazoncloudwatch, SiGit, SiReactquery, SiReactrouter } from 'react-icons/si';
-
+// Font Awesome
 import { FaHtml5, FaCss3, FaJs, FaReact, FaGithub } from "react-icons/fa";
+
+// Simple Icons
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiPython,
+  SiC,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiFirebase,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiExpress,
+  SiGraphql,
+  SiApollographql,
+  SiReactquery,
+  SiReactrouter,
+  SiRedux,
+  SiJest,
+  SiTestinglibrary,
+  SiPostman,
+  SiGit,
+  SiEclipseide,
+  SiIntellijidea,
+  SiJirasoftware,
+  SiVite,
+  SiNpm,
+  SiYarn,
+  SiExpo,
+  SiAndroidstudio,
+  SiXcode,
+  SiWebpack,
+  SiBabel,
+  SiJson,
+  SiAxios,
+  SiAmazonec2,
+  SiAmazons3,
+  SiAwslambda,
+  SiAmazoncloudwatch
+} from "react-icons/si";
+
+
 
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
@@ -43,10 +80,10 @@ const about = {
 const experience = {
     icon: "",
     title: "My Experience",
-    description: "With over 4 years of experience as a Front-end Software Developer, I have successfully contributed to developing and deploying cross-platform web and mobile applications using React and React Native. In my current role at Cigna-Evernorth, I have worked on high-impact projects like the Pharmacy Application and Behavioral Health Application, optimizing app performance, enhancing user experiences, and integrating advanced features. Previously, at Infosys, I developed a Customer Account Portal, a real-time dashboard for users to view bills, track data usage, manage plans, and access support. I ensured cross-browser compatibility and responsive design, providing a smooth experience for 98% of users across different platforms. My experience spans across designing intuitive UIs, managing state with Redux and React Context API, and implementing efficient data-fetching techniques with React Query.",
+    description: "Full-stack-leaning Frontend Developer with 3+ years of experience building responsive, high-performance web and mobile applications. Proficient in React, React Native, Redux, React Query, and modern UI/UX design. Delivered scalable cross-platform solutions and optimized data flow with advanced caching and background sync. Strong focus on clean code, accessibility (WCAG), testing (90–95% coverage with RTL/Jest), and performance optimization. Proven track record of improving app stability, responsiveness, and user satisfaction across projects.",
     items: [
         {
-            company: "MetaHub IT Solutions INC",
+            company: "MetaHub IT Solutions",
             position: "Software Developer",
             duration: "June 2024 - May 2025",
         },
@@ -81,7 +118,6 @@ const skills = {
         { icon: <FaJs />, name: "JavaScript" },
         { icon: <SiTypescript />, name: "TypeScript" },
         { icon: <SiPython />, name: "Python" },
-        { icon: <SiJava />, name: "Java" },
         { icon: <SiC />, name: "C" },
         { icon: <SiMysql />, name: "MySQL" },
         { icon: <SiPostgresql />, name: "PostgreSQL" },
@@ -101,10 +137,8 @@ const skills = {
         { icon: <SiPostman />, name: "Postman" },
         { icon: <FaGithub />, name: "GitHub" },
         { icon: <SiGit />, name: "Git" },
-        { icon: <SiVisualstudiocode />, name: "VS Code" },
         { icon: <SiEclipseide />, name: "Eclipse" },
         { icon: <SiIntellijidea />, name: "IntelliJ IDEA" },
-        { icon: <SiNetbeanside />, name: "NetBeans" },
         { icon: <SiJirasoftware />, name: "Jira" },
         { icon: <SiVite />, name: "Vite" },
         { icon: <SiNpm />, name: "npm" },
@@ -116,7 +150,6 @@ const skills = {
         { icon: <SiBabel />, name: "Babel" },
         { icon: <SiJson />, name: "JSON" },
         { icon: <SiAxios />, name: "Axios" },
-        { icon: <SiAmazonaws />, name: "AWS" },
         { icon: <SiAmazonec2 />, name: "EC2" },
         { icon: <SiAmazons3 />, name: "S3" },
         { icon: <SiAwslambda />, name: "Lambda" },
@@ -132,7 +165,7 @@ export default function Resume() {
                 opacity: 1,
                 transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
             }}
-            className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
+            className="min-h-[80vh] flex justify-center items-center py-12 xl:py-18"
         >
             <div className="container mx-auto border-yellow-200">
                 <Tabs
@@ -150,19 +183,87 @@ export default function Resume() {
                     <div className='min-h-[70vh] w-full'>
                         {/* experience */}
                         <TabsContent value="experience" className="w-full">
-                            experience
+                            <div className="flex flex-col text-center gap-[30px] xl:text-left">
+                                <h3 className="font-bold text-4xl">{experience.title}</h3>
+                                <p className="text-white/60">{experience.description}</p>
+
+                                <ScrollArea className='h-[400px]'>
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                        {experience.items.map((item,index) => (
+                                            <li 
+                                                key={index} 
+                                                className="bg-[#232329] flex h-[184px] flex-col justify-center items-center gap-1 py-6 px-10 lg:items-start rounded-xl"
+                                            >
+                                                <span className="text-accent">{item.duration}</span>
+
+                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+
+                                                <div className="flex items-center gap-3">
+                                                    <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                    <p className="text-white/60">{item.company}</p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+
+                            </div>
                         </TabsContent>
                         {/* skills */}
                         <TabsContent value="skills" className="w-full">
-                            skills
+                            <div className="flex flex-col  gap-[30px] ">
+                                <div className="flex flex-col text-center gap-[30px] xl:text-left">
+                                    <h3 className="font-bold text-4xl">{skills.title}</h3>
+                                    <p className="text-white/60">{skills.description}</p>
+                                </div>
+
+                                <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:gap-[30px] lg:grid-cols-4  gap-4 ">
+                                    {skills.skillsList.map((skill,index)=>(
+                                        <li key={index} className=" ">
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip >
+                                                    <TooltipTrigger className="w-full h-[120px] rounded-xl flex justify-center bg-[#232329] items-center group">
+                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300 ">{skill.icon}</div>
+                                                    </TooltipTrigger>
+                                                    <TooltipContent>
+                                                        <p className=" capitalize">{skill.name}</p>
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </TabsContent>
                         {/* education */}
                         <TabsContent value="education" className="w-full">
-                            education
+                            <div className="flex flex-col text-center gap-[30px] xl:text-left">
+
+                                <h3 className="font-bold text-4xl">{education.title}</h3>
+                                <p className="text-white/60">{education.description}</p>
+
+                                <ScrollArea className='h-[400px]'>
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                        {education.items.map((item,index)=>(
+                                            <li key={index} className="bg-[#232329] flex h-[184px] flex-col justify-center items-center gap-1 py-6 px-10 xl:items-start w-[400px]">
+                                                <span className="text-accent">{item.duration}</span>
+
+                                                <h3 className="text-xl max-w-[300px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+
+                                                <div className="flex gap-3 items-center w-[400px]">
+                                                    <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                    <p className="text-white/60">{item.institution}</p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+
+                            </div>
                         </TabsContent>
                         {/* about */}
                         <TabsContent value="about" className="w-full">
-                            about
+                            
                         </TabsContent>
                     </div>
                 </Tabs>
