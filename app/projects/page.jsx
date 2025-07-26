@@ -13,9 +13,8 @@ const projects = [
     {
         num: "01",
         category: "web development",
-        title: "AI interview preperation app",
-        description:
-            "Ai Mock Interview Application leverages Google Gemini AI to create realistic interview scenarios, offering users the opportunity to practice, receive evaluations, and get personalized feedback. Seamless Authentication, powered by Clerk, ensures secure and efficient access control for users. The application features an intuitive, modern interface built with Shadcn UI, providing a smooth and responsive user experience. All user progress, interview analytics, and configurations are securely managed in Google Firebase Firestore. Additionally, Dynamic Interview Customization allows users to tailor mock interviews based on job roles, difficulty levels, and specific domains, enhancing the preparation experience.",
+        title: "SmartHire AI",
+        description: "SmartHire AI uses Google Gemini AI to simulate real interviews with feedback and evaluation. It features secure login via Clerk, a clean UI with Shadcn, and stores user data in Firebase. Users can customize interviews by role, difficulty, and domain.",
         stack: [
             { name: "React" },
             { name: "TypeScript" },
@@ -32,8 +31,7 @@ const projects = [
         num: "02",
         category: "Mobile development",
         title: "Meals App",
-        description:
-            "The Meals App is a React-based application designed to help users discover, browse, and explore a variety of meal recipes. It allows users to search for meals based on specific criteria like ingredients, meal types, or cuisine. The app provides detailed information about each meal, including ingredients, instructions, and possibly nutritional information. Users can easily browse through different categories of meals and save their favorite meals for future reference. With an intuitive user interface and dynamic functionality, the Meals App aims to enhance the meal planning and cooking experience by making it easy to find and organize meals.",
+        description: "The Meals App is a React-based web app that lets users search, explore, and save meal recipes by ingredients, cuisine, or type. It offers detailed meal info and a user-friendly interface to simplify meal planning and cooking.",
         stack: [
             { name: "ReactNative" },
             { name: "JavaScript" },
@@ -49,7 +47,7 @@ const projects = [
         num: "03",
         category: "web development",
         title: "Foodies App",
-        description: "The Foodies App is a web application built with Next.js and React that allows users to explore a variety of meals with engaging visuals and icons. It features a clean UI, real-time search, and dynamic content rendering. Data is efficiently handled using better-sqlite3 for lightweight database operations, with security considerations like xss protection integrated. This project showcases a responsive and user-friendly food discovery experience.",
+        description: "The Foodies App is a responsive web app built with Next.js and React. It features dynamic content, real-time search, and clean UI styling using CSS modules for scoped and maintainable styles. It uses better-sqlite3 for lightweight data handling and offers a smooth food discovery experience.",
         stack: [
             { name: "NextJS" },
             { name: "React" },
@@ -65,13 +63,14 @@ const projects = [
         num: "04",
         category: "mobile development",
         title: "Expense Traker",
-        description: `The Expense Tracker App is a cross-platform mobile application built with React Native for both iOS and Android. It allows users to record, categorize, and monitor their daily expenses in real-time. Featuring an intuitive UI, the app provides visual summaries of spending patterns, supports data persistence, and enables users to set spending limits for better financial control. This project showcases efficient state management, responsive design, and seamless mobile performance.`,
+        description: "The Expense Tracker App is a React Native mobile app for tracking daily expenses. It uses Context API for state management and Firebase for data storage, offering real-time entry, visual summaries, spending limits, and smooth performance on both iOS and Android.",
         stack: [
             { name: "ReactNative" },
             { name: "StyleSheet" },
             { name: "JavaScript" },
             { name: "ContextAPI" },
             { name: "expo" },
+            { name: "firebase" },
         ],
         image: "/assets/images/expense.jpg",
         github: "https://github.com/PraneethBunny123/native-expense-tracker",
@@ -80,7 +79,7 @@ const projects = [
         num: "05",
         category: "web development",
         title: "Shopping Cart",
-        description: `The Shopping Cart App is a modern web application developed using React and Vite. It enables users to browse items, add them to a cart, update quantities, and proceed to checkout. The app features dynamic cart updates, efficient state management, and a clean, responsive UI for a seamless user experience. This project highlights practical e-commerce functionality and performance-focused front-end development.`,
+        description: "The Shopping Cart App is a React and Vite web app that lets users browse items, manage their cart, and checkout with a clean, responsive UI and efficient state management.",
         stack: [
             { name: "React" },
             { name: "JavaScript" },
@@ -108,7 +107,7 @@ export default function Contact() {
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
                     <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none xl:h-[460px]">
-                        <div>
+                        <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* project num */}
                             <div className="text-8xl font-extrabold leading-none text-outline text-transparent">
                                 {project.num}
@@ -134,19 +133,22 @@ export default function Contact() {
                             </ul>
                             {/* border */}
                             <div className="border-white/20 border"></div>
-                            {/* git */}
-                            <Link href={project.github} target="_blank">
-                                <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full items-center group bg-white/5 flex justify-center">
-                                            <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>{project.title}</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </Link>
+                            {/* buttons */}
+                            <div className="flex items-center gap-4">
+                                {/* github link */}
+                                <Link href={project.github} target="_blank">
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full items-center group bg-white/5 flex justify-center">
+                                                <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>{project.title}</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%]">slider</div>
