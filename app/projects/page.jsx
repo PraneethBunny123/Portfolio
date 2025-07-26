@@ -128,10 +128,25 @@ export default function Contact() {
                                 {project.stack.map((item, index) => (
                                     <li key={index} className="text-xl text-accent">
                                         {item.name}
-                                        
+
                                     </li>
                                 ))}
                             </ul>
+                            {/* border */}
+                            <div className="border-white/20 border"></div>
+                            {/* git */}
+                            <Link href={project.github} target="_blank">
+                                <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full items-center group bg-white/5 flex justify-center">
+                                            <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>{project.title}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </TooltipProvider>
+                            </Link>
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%]">slider</div>
