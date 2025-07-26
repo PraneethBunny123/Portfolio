@@ -21,7 +21,7 @@ const projects = [
             { name: "TypeScript" },
             { name: "TailwindCss" },
             { name: "ShadCn" },
-            { name: "GoogleGeminiAI" },
+            { name: "Gemini" },
             { name: "Firebase" },
             { name: "ClerkAuthentication" },
         ],
@@ -106,7 +106,7 @@ export default function Contact() {
                 opacity: 1,
                 transition: { delay: 2, duration: 0.4, ease: "easeIn" },
             }}
-            className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+            className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 xl:py-18"
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
@@ -129,7 +129,8 @@ export default function Contact() {
                             <p className="text-white/60">{project.description}</p>
 
                             {/* tech stack */}
-                            <ul className="flex gap-4">
+                            <div className="w-full max-w-xl">
+                            <ul className="flex gap-4 flex-wrap">
                                 {project.stack.map((item, index) => (
                                     <li key={index} className="text-xl text-accent">
                                         {item.name}
@@ -137,10 +138,11 @@ export default function Contact() {
                                     </li>
                                 ))}
                             </ul>
+                            </div>
                             {/* border */}
                             <div className="border-white/20 border"></div>
                             {/* buttons */}
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4 pb-20">
                                 {/* github link */}
                                 <Link href={project.github} target="_blank">
                                     <TooltipProvider delayDuration={100}>
