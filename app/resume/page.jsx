@@ -145,6 +145,26 @@ export default function Resume() {
                         <TabsTrigger value="education">Education</TabsTrigger>
                         <TabsTrigger value="about">About me</TabsTrigger>
                     </TabsList>
+
+                    {/* content */}
+                    <div className='min-h-[70vh] w-full'>
+                        {/* experience */}
+                        <TabsContent value="experience" className="w-full">
+                            experience
+                        </TabsContent>
+                        {/* skills */}
+                        <TabsContent value="skills" className="w-full">
+                            skills
+                        </TabsContent>
+                        {/* education */}
+                        <TabsContent value="education" className="w-full">
+                            education
+                        </TabsContent>
+                        {/* about */}
+                        <TabsContent value="about" className="w-full">
+                            about
+                        </TabsContent>
+                    </div>
                 </Tabs>
             </div>
         </motion.div>
