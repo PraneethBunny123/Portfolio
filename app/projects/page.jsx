@@ -13,7 +13,7 @@ const projects = [
     {
         num: "01",
         category: "web development",
-        title: "AI mock interview application",
+        title: "AI interview preperation app",
         description:
             "Ai Mock Interview Application leverages Google Gemini AI to create realistic interview scenarios, offering users the opportunity to practice, receive evaluations, and get personalized feedback. Seamless Authentication, powered by Clerk, ensures secure and efficient access control for users. The application features an intuitive, modern interface built with Shadcn UI, providing a smooth and responsive user experience. All user progress, interview analytics, and configurations are securely managed in Google Firebase Firestore. Additionally, Dynamic Interview Customization allows users to tailor mock interviews based on job roles, difficulty levels, and specific domains, enhancing the preparation experience.",
         stack: [
@@ -94,6 +94,8 @@ const projects = [
 
 
 export default function Contact() {
+    const [project, setProject] = useState(projects[0])
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -105,8 +107,22 @@ export default function Contact() {
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-                    <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none xl:h-[460px] gap-[30px]">
-                        text
+                    <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none xl:h-[460px]">
+                        <div>
+                            {/* project num */}
+                            <div className="text-8xl font-extrabold leading-none text-outline text-transparent">
+                                {project.num}
+                            </div>
+
+                            {/* category */}
+                            <h2 className="font-bold text-white group-hover:text-accent capitalize transition-all duration-200 leading-none text-[42px]">
+                                {project.category}
+                            </h2>
+                            <h3 className="text-accent text-xl capitalize">{project.title}</h3>
+
+                            {/* description */}
+                            <p className="text-white/60">{project.description}</p>
+                        </div>
                     </div>
                     <div className="w-full xl:w-[50%]">slider</div>
                 </div>
