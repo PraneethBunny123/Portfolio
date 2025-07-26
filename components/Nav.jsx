@@ -20,10 +20,6 @@ export const links = [
         name: 'resume',
         path: '/resume'
     },
-    {
-        name: 'contact',
-        path: '/contact'
-    }
 ]
 
 export default function Nav() {
