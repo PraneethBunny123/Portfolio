@@ -95,8 +95,20 @@ const projects = [
 
 export default function Contact() {
     return (
-        <div>
-            Contact
-        </div>
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{
+                opacity: 1,
+                transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+            }}
+            className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+        >
+            <div className="container mx-auto">
+                <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+                    <div>text</div>
+                    <div>slider</div>
+                </div>
+            </div>
+        </motion.section>
     )
 }
