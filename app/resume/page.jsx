@@ -54,7 +54,7 @@ import { motion } from "framer-motion";
 
 const about = {
     title: "About me",
-    description: "I am a passionate and driven developer with a commitment to creating scalable, user-centric applications. I thrive in fast-paced environments, always eager to solve complex problems and improve the performance and usability of the applications I work on. I am continuously learning and staying updated with the latest technologies and industry trends to ensure that I deliver cutting-edge solutions. I value collaboration and enjoy working with cross-functional teams to bring innovative ideas to life. My goal is to build applications that not only meet user needs but also offer exceptional and seamless experiences.",
+    description: "Results-driven Software Developer with nearly 3+ years of experience building responsive and scalable web applications using React.js. Strong proficiency in JavaScript, HTML, CSS, and modern UI/UX principles, with hands-on experience in state management and component-based architecture. Familiar with full-stack concepts, including Node.js and Express.js, but primarily focused on front-end development. Passionate about writing clean, efficient code and optimizing performance to enhance user experience. Eager to contribute to innovative projects and grow as a developer.",
     info: [
         {
             fieldName: "Name",
@@ -266,8 +266,22 @@ export default function Resume() {
                             </div>
                         </TabsContent>
                         {/* about */}
-                        <TabsContent value="about" className="w-full">
-                            
+                        <TabsContent value="about" className="w-full text-center xl:text-left">
+                            <div className="flex flex-col gap-[30px]">
+				
+                                <h3 className="font-bold text-4xl">{about.title}</h3>
+                                <p className="text-white/60">{about.description}</p>
+                                
+                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 mx-auto xl:mx-0 max-w-[700px]">
+                                    {about.info.map((item,index)=>(
+                                        <li key={index} className="flex justify-center items-center gap-4 xl:justify-start">
+                                            <span className="text-white/60">{item.fieldName} </span>
+                                            <span className="text-xl">{item.fieldValue}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                            </div>
                         </TabsContent>
                     </div>
                 </Tabs>
