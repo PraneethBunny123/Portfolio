@@ -5,6 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
+//emailjs imports
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 const info = [
     {
         icon: <FaPhoneAlt />,
@@ -25,6 +29,30 @@ const info = [
 
 
 export default function Contact() {
+    const form = useRef();
+
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+        })
+        .then(
+        () => {
+            alert('Sent message successfully!')
+            e.target.reset()
+        },
+        (error) => {
+            console.log('FAILED...', error.text);
+        },
+        );
+    };
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -39,6 +67,8 @@ export default function Contact() {
                     {/* form */}
                     <div className="xl:w-[54%] xl:order-none order-2">
                         <form
+                            ref={form}
+                            onSubmit={sendEmail}
                             className="flex flex-col gap-6 p-10 rounded-xl bg-[#27272c]"
                         >
                             <h3 className="text-4xl text-accent">Let's Work Together</h3>
@@ -51,11 +81,13 @@ export default function Contact() {
                                     type="name"
                                     placeholder="Name"
                                     name='name'
+                                    required
                                 />
                                 <Input
                                     type="email"
                                     placeholder="Email"
                                     name='email'
+                                    required
                                 />
                             </div>
                             {/* text area */}
@@ -63,6 +95,7 @@ export default function Contact() {
                                 className="h-[200px]"
                                 placeholder="Type your message here."
                                 name='message'
+                                required
                             />
                             {/* button */}
                             <Button size="md" className="max-w-40 py-2">
