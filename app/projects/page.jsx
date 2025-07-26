@@ -95,6 +95,11 @@ const projects = [
 export default function Contact() {
     const [project, setProject] = useState(projects[0])
 
+    function handleSlideChange(swiper) {
+        const currentIndex = swiper.activeIndex
+        setProject(projects[currentIndex])
+    }
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -106,6 +111,8 @@ export default function Contact() {
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+
+                    {/* project content */}
                     <div className="w-full xl:w-[50%] flex flex-col xl:justify-between order-2 xl:order-none xl:h-[460px]">
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* project num */}
@@ -151,7 +158,27 @@ export default function Contact() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full xl:w-[50%]">slider</div>
+
+                    {/* Slider */}
+                    <div className="w-full xl:w-[50%]">
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={10}
+                            className="mb-12 gap-10"
+                            onSlideChange={handleSlideChange}
+                        >
+                            {projects.map((item, index) => (
+                                <SwiperSlide key={index} className="w-full">
+                                    <div className="h-[460px] relative flex justify-center items-center group">
+                                        {/* slide content */}
+                                        <div className="relative h-full w-full">
+                                            <Image src={item.image} alt="" fill className="object-contain"/>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
             </div>
         </motion.section>
