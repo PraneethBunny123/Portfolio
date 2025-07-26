@@ -20,14 +20,19 @@ export const links = [
         name: 'resume',
         path: '/resume'
     },
+    {
+        name: 'contact',
+        path: '/contact'
+    },
 ]
 
 export default function Nav() {
     const pathName = usePathname()
+    const filteredLinks = links.filter(link => link.name !== 'contact')
 
     return (
         <nav className="flex gap-8">
-            {links.map(link => (
+            {filteredLinks.map(link => (
                 <Link 
                     href={link.path} 
                     key={link.name}
