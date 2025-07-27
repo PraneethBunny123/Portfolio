@@ -103,7 +103,7 @@ const education = {
         {
             institution: "Texas A&M University - Corpus Christi",
             degree: `Master of Science`,
-            duration: "2016-2020",
+            duration: "2023-2025",
         },
     ],
 };
