@@ -8,7 +8,7 @@ import Stats from '@/components/Stats'
 const Home = () => {
 	return (
 		<section className='h-full'>
-			<div className='container mx-auto h-full'>
+			<div className='container mx-auto h-full py-12 xl:py-18'>
 				<div className='flex flex-col xl:flex-row justify-between items-center xl:pb-24'>
 
 					{/* text */}
@@ -49,7 +49,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-
+            {/* stats */}
             <Stats />
 		</section>
 	)
