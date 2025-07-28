@@ -12,7 +12,7 @@ export default function Photo() {
 					opacity: 1,
 					transition: { delay: 1.5, duration: 0.4, ease: 'easeIn' },
 				}}>
-				<div className='w-[298px] h-[298px] xl:w-[498px] xl:h-[328px] mix-blend-lighten'>
+				<div className='w-[298px] h-[298px] xl:w-[498px] xl:h-[338px] mix-blend-lighten'>
 					<Image
 						src='/assets/images/photo1.jpg'
 						priority

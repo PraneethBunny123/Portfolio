@@ -17,8 +17,8 @@ export const links = [
         path: '/projects'
     },
     {
-        name: 'resume',
-        path: '/resume'
+        name: 'experience',
+        path: '/experience'
     },
     {
         name: 'contact',
