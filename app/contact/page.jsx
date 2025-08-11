@@ -24,7 +24,7 @@ const info = [
     {
         icon: <FaMapMarkerAlt />,
         title: "Address",
-        description: "1515 Ennis Joslin Rd, Corpus Christi, TX-78412",
+        description: "Giants Way, Lakeville, MN-55044",
     },
 ];
 
