@@ -88,7 +88,23 @@ const projects = [
         image: "/assets/images/store.png",
         github: "https://github.com/PraneethBunny123/Demo-Shopping-Cart",
     },
-];
+    {
+        num: "06",
+        category: "web development",
+        title: "ClimeCast",
+        description: "ClimeCast is a weather forecasting app built with React and TypeScript that displays real-time data, interactive charts, and a responsive UI for an engaging user experience.",
+        stack: [
+            { name: "React" },
+            { name: "TypeScript" },
+            { name: "TanStack-Query" },
+            { name: "Recharts" },
+            { name: "TailwindCSS" },
+            { name: "shadcn" },
+        ],
+        image: "/assets/images/climecast.png",
+        github: "https://github.com/PraneethBunny123/ClimeCast",
+    }
+]
 
 
 export default function Contact() {
