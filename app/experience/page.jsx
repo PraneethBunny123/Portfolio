@@ -54,7 +54,7 @@ import { motion } from "framer-motion";
 
 const about = {
     title: "About me",
-    description: "Results-driven Software Developer with nearly 3+ years of experience building responsive and scalable web applications using React.js. Strong proficiency in JavaScript, HTML, CSS, and modern UI/UX principles, with hands-on experience in state management and component-based architecture. Familiar with full-stack concepts, including Node.js and Express.js, but primarily focused on front-end development. Passionate about writing clean, efficient code and optimizing performance to enhance user experience. Eager to contribute to innovative projects and grow as a developer.",
+    description: "Results-driven Software Developer with over 4 years of experience building responsive and scalable web applications using React.js. Strong proficiency in JavaScript, HTML, CSS, and modern UI/UX principles, with hands-on experience in state management and component-based architecture. Familiar with full-stack concepts, including Node.js and Express.js, but primarily focused on front-end development. Passionate about writing clean, efficient code and optimizing performance to enhance user experience. Eager to contribute to innovative projects and grow as a developer.",
     info: [
         {
             fieldName: "Name",
@@ -67,7 +67,7 @@ const about = {
 
         {
             fieldName: "Experience",
-            fieldValue: "3+ Years",
+            fieldValue: "4+ Years",
         },
 
         {
@@ -85,7 +85,7 @@ const experience = {
         {
             company: "MetaHub IT Solutions",
             position: "Software Developer",
-            duration: "June 2024 - May 2025",
+            duration: "June 2024 - present",
         },
         {
             company: "iOPEX Technologies",

@@ -19,7 +19,7 @@ const Home = () => {
                         </h1>
                         
                         <p className='max-w-[500px] mb-9 text-white/80'>
-                            Results-driven Software Developer with 3+ years of experience building responsive, scalable, 
+                            Results-driven Software Developer with over 4 years of experience building responsive, scalable, 
                             and user-friendly web & mobile applications, with full-stack capabilities.
                         </p>
 
